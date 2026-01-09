@@ -114,16 +114,79 @@ Add- adds new or changed files in your working directory to the Git staging area
  git add<-filename-> for single file.
  git add . for all files
 
-
 Unmodified - add (untracked) - commit
 
 Commit- it is the record of change
  git commit -m "some message"
 
+// Push Command
+ push- upload local repo content to remote repo
 
+ git push origin main 
+  here the origin is the repo on github and the main is the branch.
 
+// Init Command
+ init- used to create a new git repo
+cd .. {used to come out of and directory}
+mkdir {It's used to make a new directory}
+ 
+ git init
+ git remote add origin<-link->
+ git remote -v (To verify remote)
+ 
+ git push -u origin main
 
+// Git Branch 
+ To understand branch let's say we have 3 teams
+ 1 Frontend team
+ 2 backend team
+ 3 bugfix team 
+So all 3 teams are working on a same project and for a smooth working they all made a copy(BRANCH) of the real program. 
+Just like a tree have lot of branch right. here all the branches comes from the main.
 
+git branch (To check branch)
 
+master branch is a default branch but on github it is changed to main.{I am talking about the name.}
+So that's why we need to change to name of our branch to main from master before push.
 
+git branch -M main (To rename branch)
+
+git checkout <-branch name-> {To navigate}
+git checkout -b <-new branch name-> {To create new branch}
+git branch -d <-branch name-> {To delete branch}
+
+// Workflow
+Local Git
+github repo
+  |
+clone
+  |
+changes
+  |
+add
+  |
+commit
+  |
+push
+
+// Merging Code
+way1
+git diff <-branch name-> {to compare commits,branches,files&more}
+git merge<-branch name-> {to merge2branches}
+
+way2
+create a PR
+
+// PR- Pull Request
+It lets you tell others about chnages you've pushed to a branch in a repository on GitHub.
+
+// Pull Command
+Used to fetch and download content froma remote repo and immediately update the local repo to match that content.
+git pull origin main
+
+// Resolving Merge Conflicts
+An event that takes place when Git is unable to automatically resolve differences in code between two commits.
+
+git merge <-branch name->
+The error occur while merging is called conflict.
 </p>
