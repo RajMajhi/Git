@@ -188,5 +188,5 @@ git pull origin main
 An event that takes place when Git is unable to automatically resolve differences in code between two commits.
 
 git merge <-branch name->
-The error occur while merging is called conflict.
+The error occur while merging is called conflict..
 </p>
