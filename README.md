@@ -1,7 +1,7 @@
 # Git
 Trying GIT
 <br>
-Author - RajMajhi
+Author - Raj Majhi
 
 <pr>
 //Git?
@@ -27,8 +27,8 @@ Ex :
 
 Let's dive into git and github
 
-TO OPEN AN ACCOUNT ON GITHUB 
-//Need email, Can be personal or college, while college email give lots of other features but generally we should prefer using our own personal email.
+//TO OPEN AN ACCOUNT ON GITHUB 
+Need email, Can be personal or college, while college email give lots of other features but generally we should prefer using our own personal email.
 Password & Username...
 
 AFTER LOGIN TO GITHUB
@@ -58,19 +58,19 @@ Repositories> New> Repositoryname{write here}> other options are optional.> Crea
 
  Readme.md <-- md stands for markdown.
 
-//setting up Git
+//Setting up Git
 can be done in 
 Visual studio code (VScode)
 Windows (Git Bash)
 Mac (Terminal)
 website : git-scm.com
 
-// To check git 
+//To check git 
 git --version {Git version}
 ls - {list all the files.}
 pwd - {to check working directory}
 
-// Configuring Git
+//Configuring Git
 It is important step as here we'll connect git and github.
 
 There are 2 types of configurations 
@@ -188,5 +188,5 @@ git pull origin main
 An event that takes place when Git is unable to automatically resolve differences in code between two commits.
 
 git merge <-branch name->
-The error occur while merging is called conflict..
+The error occur while merging is called conflict...
 </p>
