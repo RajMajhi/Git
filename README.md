@@ -192,29 +192,51 @@ The error occur while merging is called conflict...
 
 Getting Started and Setup
 git --version: Checks if Git is installed and displays the current version.
+
 git config --global user.name "[name]": Sets your username for all local repositories.
+
 git config --global user.email "[email address]": Sets your email address for all local repositories.
+
 git init: Initializes a new Git repository in the current directory, creating a hidden .git folder.
+
 git clone [url]: Creates a local copy of a project that already exists remotely. 
+<br>
 Staging and Committing Changes
 git status: Shows the status of files as untracked, modified, or staged.
+
 git add [file]: Stages changes to a specific file for the next commit.
+
 git add .: Stages all changes in the current directory for the next commit.
+
 git commit -m "[message]": Records the staged snapshot permanently in the project history with a descriptive message.
+
 git diff: Shows the difference between unstaged changes and the last committed version. 
+<br>
 Branching and Merging
 git branch [branch-name]: Creates a new local branch.
+
 git checkout [branch-name]: Switches to a specific branch or commit. (Note: git switch is a newer alternative for switching branches).
+
 git checkout -b [new-branch-name]: Creates a new branch and immediately switches to it.
+
 git merge [branch-name]: Combines changes from the specified branch into the current branch. 
+<br>
 Syncing with Remote Repositories
 git remote add [alias] [url]: Links a local repository to a remote one (e.g., on GitHub), using an alias like "origin".
+
 git push origin [branch-name]: Uploads local branch commits to the remote repository.
+
 git pull origin [branch-name]: Fetches changes from the remote repository and merges them into the current local branch.
+
 git fetch: Downloads branches and their commits from the remote repository but does not automatically merge them, allowing you to inspect changes first. 
+<br>
 Inspecting History and Undoing Changes 
 git log: Displays a detailed log of commits in the current branch.
+
 git revert [commit-id]: Undoes a committed snapshot by creating a new commit with the inverse changes, which is a safe way to undo changes in a shared history.
+
 git reset --hard [commit-id]: Undoes commits by moving the branch tip back to a specified commit, discarding subsequent changes in the working directory. Use with caution as this can cause data loss.
+
 git stash: Temporarily saves local modifications and returns to a clean working directory, without committing them. 
+
 </p>
