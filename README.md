@@ -1,242 +1,212 @@
-# Git
-Trying GIT
-<br>
-Author - Raj Majhi
+# Complete Git & GitHub Guide (All-in-One)
 
-<pr>
-//Git?
- Git is a Version Control System Popular, free & open source,  Fast & Scalable.
- // VCS is a tool that helps to track changes in code.
+**Author:** Raj Majhi  
 
-Ex : 
-1. TO TRACK THE HISTORY 
- lets say we are working on a project like building a signup page, Here we added lot of things but now want to change those things as they were before, now we can do it manually as it is small scale project but what about large scale projects, In large scale project it's too risky to commit changes and on that if you do it manually it means you need to delete  files one by one which can be hectic, So here comes GIT which actually automates those works for you, with Git we can go back and forth i.e initial stage and updated stage./
+This repository is a complete beginner-to-intermediate reference for **Git and GitHub**.  
+It explains what Git/GitHub are, how they work, and includes **well-commented commands** with their uses.
 
-2. COLLABORATE
- It's just as it sounds 'Collaborate', with the help of git we can collaborate with others to work on an project. Apart from sole projects, There are large projects from Companies where we need to work in a team, Which actually can messup if there is no proper co-ordination. 
- Like on such projects there are lot of developer are working so it is very difficult to find out who made the changes, shall we accept those changes?, And to prevent OverWrite too. So to avoid such issues we use git./
+---
 
-//Github?
- Is a Website that allows developers to store and manage their code using Git.
- https://github.com
+# 📌 What is Git?
 
- This code is then reviewed by other developers or HR for job purpose.
+Git is a **free and open-source Version Control System (VCS)** used to track changes in source code.
 
- We can say that Github is like instagram but it is specifically for developers, 
- Here, Developers post(PUSH) their folders(REPOSITORY), Even copy(CLONE) others Repository and perform changes(COMMIT)./
+### ✅ Uses of Git
+- Track project history  
+- Revert to older versions  
+- Work safely on large projects  
+- Collaborate with multiple developers  
 
-Let's dive into git and github
+---
 
-//TO OPEN AN ACCOUNT ON GITHUB 
-Need email, Can be personal or college, while college email give lots of other features but generally we should prefer using our own personal email.
-Password & Username...
+#  What is GitHub?
 
-AFTER LOGIN TO GITHUB
-you'll see
+GitHub is a **web platform** that hosts Git repositories and helps developers collaborate, review code, and manage projects online.
 
-Overview, Repositories, Projects, Packages, Stars.
+It is like a **social platform for developers**, where repositories can be pushed, cloned, reviewed, and improved.
 
-//Task after GitHub Account - 
-# Create a new repo : {name can be anything},
-# make our first commit.
- git and github uses 2 step process before updation i.e,
-  ADD then COMMIT
-    When we perform some changes we ADD them here the changes are temperory but when we release it i.e COMMIT it is Permanent. 
-    but on github the add step is geenerally skipped and we can directly Commit.
+---
 
-    Github saves the commits in the form of history.
+# 🧾 What is a README?
 
-//Commit message - here we need to write the change we made.    
+A `README.md` file describes:
+- What the project does  
+- How to install and use it  
+- Commands and documentation  
 
-//Initial commit - The first ever change we make after initial comes Update this are the secondary changes.
+Markdown (`.md`) helps format content on GitHub.
 
-Repositories> New> Repositoryname{write here}> other options are optional.> Create repository.
+---
 
-//Readme? 
- Readme is a special type of file which include details about the project like name, what is the project about, and steps how to use the project, etc... 
- Generally adding readme is a good thing. 
+# ⚙️ Installing & Checking Git
 
- Readme.md <-- md stands for markdown.
+```bash
+git --version        # Checks whether Git is installed and shows the version
 
-//Setting up Git
-can be done in 
-Visual studio code (VScode)
-Windows (Git Bash)
-Mac (Terminal)
-website : git-scm.com
+git config --global user.name "Your Name"        
+# Sets your name for all repositories (global configuration)
 
-//To check git 
-git --version {Git version}
-ls - {list all the files.}
-pwd - {to check working directory}
+git config --global user.email "youremail@example.com"  
+# Sets your email (use the same one as GitHub)
 
-//Configuring Git
-It is important step as here we'll connect git and github.
-
-There are 2 types of configurations 
-1. Global - The whole system.{Single user}
-2. Local - Specific repo.{Multiple user}
-
-git config --global user.name"My name"
-git config --global user.email"someone@email.com" {use the same email & name that you used on github.}
-git congig --list
+git config --list    
+# Displays all configured Git settings
 
+Basic system Commands (Used in Git)
+ls            # Lists files and folders
+ls -a         # Lists all files including hidden ones
+pwd           # Shows current working directory
+cd folder     # Moves into a folder
+cd ..         # Moves one step back
+mkdir name    # Creates a new directory
+clear         # Clears the terminal screen
 
-# GIT BASIC COMMANDS
-Remote {github}
-Local {laptop / pc}
 
-// Clone & Status 
-Cloning a repository on our local machine.
- git clone <link>
+Creating a New Repository
+git init      
+# Initializes a new Git repository (creates hidden .git folder)
 
- Go to github > Repo > Code > Clone > HTTPS {copy the link}.
+git status    
+# Shows current state of files (tracked, untracked, modified, staged)
 
-Status
-Displays the state of the code.
- git status
+Cloning a Repository 
+git clone <repo-link>   
+### Creates a copy of an existing GitHub repository on your system ###
 
- There are 4 types of status
- 1. untracked - new files that git doesn't yet track.
- 2. modified - changed.
- 3. staged - file is ready to be committed.
- 4. unmodified - unchanged.
-
-cd - {Change directory}
- cd directory name
-
-There are two types of file {Directories}
- 1. Hidden , ls -a
- 2. Non-Hidden , ls
 
-// Add & Commit
-Add- adds new or changed files in your working directory to the Git staging area.
- git add<-filename-> for single file.
- git add . for all files
+File states in git
+Untracked → New file (Git doesn’t track yet)
+Modified → File changed
+Staged → Ready to commit
+Unmodified → No changes
 
-Unmodified - add (untracked) - commit
+Adding Files to Staging Area # Staging means preparing files for commit.
+git add file.txt    
+# Adds a specific file to staging
 
-Commit- it is the record of change
- git commit -m "some message"
+git add .           
+# Adds all changed and new files to staging
 
-// Push Command
- push- upload local repo content to remote repo
+Committing Changes # Commit = record of change
+git commit -m "Your message" # Saves a permanent snapshot of staged changes with a message
 
- git push origin main 
-  here the origin is the repo on github and the main is the branch.
+Connecting local repo to github
+git remote add origin <repo-link>  
+# Connects local repository to GitHub
 
-// Init Command
- init- used to create a new git repo
-cd .. {used to come out of and directory}
-mkdir {It's used to make a new directory}
- 
- git init
- git remote add origin<-link->
- git remote -v (To verify remote)
- 
- git push -u origin main
+git remote -v  
+# Shows connected remote URLs
 
-// Git Branch 
- To understand branch let's say we have 3 teams
- 1 Frontend team
- 2 backend team
- 3 bugfix team 
-So all 3 teams are working on a same project and for a smooth working they all made a copy(BRANCH) of the real program. 
-Just like a tree have lot of branch right. here all the branches comes from the main.
+Pushing Code to Github
+git push origin main  
+# Uploads commits from local system to GitHub
 
-git branch (To check branch)
+git push -u origin main  
+# Sets upstream so future pushes need only: git push
 
-master branch is a default branch but on github it is changed to main.{I am talking about the name.}
-So that's why we need to change to name of our branch to main from master before push.
+Pulling Code from Github
+git pull origin main  
+# Downloads changes from GitHub and updates local repository
 
-git branch -M main (To rename branch)
+Branching (Working in Parallel) # Branches are used for features, fixes, and experiments.
+git branch                 
+# Lists all branches
 
-git checkout <-branch name-> {To navigate}
-git checkout -b <-new branch name-> {To create new branch}
-git branch -d <-branch name-> {To delete branch}
+git branch new-branch      
+# Creates a new branch
 
-// Workflow
-Local Git
-github repo
-  |
-clone
-  |
-changes
-  |
-add
-  |
-commit
-  |
-push
+git checkout new-branch    
+# Switches to that branch
 
-// Merging Code
-way1
-git diff <-branch name-> {to compare commits,branches,files&more}
-git merge<-branch name-> {to merge2branches}
+git checkout -b feature    
+# Creates and switches to a new branch
 
-way2
-create a PR
+git branch -d branch-name  
+# Deletes a branch
 
-// PR- Pull Request
-It lets you tell others about chnages you've pushed to a branch in a repository on GitHub.
+git branch -M main         
+# Renames current branch to main
 
-// Pull Command
-Used to fetch and download content froma remote repo and immediately update the local repo to match that content.
-git pull origin main
 
-// Resolving Merge Conflicts
-An event that takes place when Git is unable to automatically resolve differences in code between two commits.
+Merging Branches 
+git diff branch-name       
+# Shows differences before merging
 
-git merge <-branch name->
-The error occur while merging is called conflict...
+git merge branch-name      
+# Merges specified branch into current branch
 
-Getting Started and Setup
-git --version: Checks if Git is installed and displays the current version.
+Resolving Merge Conflicts
+Open conflicted file
+Fix code manually
+Add file again
+Commit changes
 
-git config --global user.name "[name]": Sets your username for all local repositories.
+git add .
+git commit -m "Resolved merge conflict"
 
-git config --global user.email "[email address]": Sets your email address for all local repositories.
 
-git init: Initializes a new Git repository in the current directory, creating a hidden .git folder.
+🧲 Pull Requests (PR)
+A Pull Request lets you:
+Propose changes
+Get reviews
+Merge branches safely on GitHub
 
-git clone [url]: Creates a local copy of a project that already exists remotely. 
-<br>
-Staging and Committing Changes
-git status: Shows the status of files as untracked, modified, or staged.
+Used heavily in team projects.
 
-git add [file]: Stages changes to a specific file for the next commit.
+Viewing History
+git log           
+# Shows detailed commit history
 
-git add .: Stages all changes in the current directory for the next commit.
+git log --oneline 
+# Shows short commit history
 
-git commit -m "[message]": Records the staged snapshot permanently in the project history with a descriptive message.
+⏪ Undoing Changes
+git restore file.txt       
+# Discards changes in a file (not staged)
 
-git diff: Shows the difference between unstaged changes and the last committed version. 
-<br>
-Branching and Merging
-git branch [branch-name]: Creates a new local branch.
+git reset file.txt         
+# Unstages a staged file
 
-git checkout [branch-name]: Switches to a specific branch or commit. (Note: git switch is a newer alternative for switching branches).
+git revert <commit-id>     
+# Safely undo a commit by creating a new commit
 
-git checkout -b [new-branch-name]: Creates a new branch and immediately switches to it.
+git reset --hard <id>      
+# Deletes commits and changes permanently (use carefully)
 
-git merge [branch-name]: Combines changes from the specified branch into the current branch. 
-<br>
-Syncing with Remote Repositories
-git remote add [alias] [url]: Links a local repository to a remote one (e.g., on GitHub), using an alias like "origin".
+📦 Temporary Save (Stash)
+git stash        
+# Temporarily saves uncommitted changes
 
-git push origin [branch-name]: Uploads local branch commits to the remote repository.
+git stash pop    
+# Restores stashed changes
 
-git pull origin [branch-name]: Fetches changes from the remote repository and merges them into the current local branch.
+🔍 Inspecting & Comparing
+git show <id>      
+# Shows details of a specific commit
 
-git fetch: Downloads branches and their commits from the remote repository but does not automatically merge them, allowing you to inspect changes first. 
-<br>
-Inspecting History and Undoing Changes 
-git log: Displays a detailed log of commits in the current branch.
+git diff          
+# Shows unstaged changes
 
-git revert [commit-id]: Undoes a committed snapshot by creating a new commit with the inverse changes, which is a safe way to undo changes in a shared history.
+git diff --staged 
+# Shows staged changes
 
-git reset --hard [commit-id]: Undoes commits by moving the branch tip back to a specified commit, discarding subsequent changes in the working directory. Use with caution as this can cause data loss.
+🔄 Workflow
+Create / Clone Repo
+        ↓
+  Make Changes
+        ↓
+     git add
+        ↓
+    git commit
+        ↓
+     git push
+        ↓
+      GitHub
 
-git stash: Temporarily saves local modifications and returns to a clean working directory, without committing them. 
+#This repository is created for learning, practicing, and revising Git & GitHub.
+It connects all major concepts in one place with clear commands and uses.
 
-</p>
+If someone want they can PR me for an Edit...
+Happy Learning & Building
+@RajMajhi 
+
